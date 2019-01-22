@@ -17,9 +17,12 @@ defmodule Practice do
   end
 
   def factor(x) do
-    # Maybe delegate this too.
-    [1,2,x]
+    # Delegate to lib/practice/calc.ex
+    Practice.Calc.factorize(x)
   end
 
-  # TODO: Add a palindrome? function.
+  def palindrome(expr) do
+    # TODO: make me work
+    true
+  end
 end

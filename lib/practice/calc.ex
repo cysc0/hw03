@@ -12,7 +12,7 @@ defmodule Practice.Calc do
     |> hd
     |> parse_float
     |> :math.sqrt()
-
+    # TODO: make me work
     # Hint:
     # expr
     # |> split
@@ -20,5 +20,10 @@ defmodule Practice.Calc do
     # |> convert to postfix
     # |> reverse to prefix
     # |> evaluate as a stack calculator using pattern matching
+  end
+
+  def factorize(x) do
+    # TODO: make me work
+    [1,2,x]
   end
 end
