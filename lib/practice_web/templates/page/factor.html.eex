@@ -3,6 +3,11 @@
     <p><%= link "← go back", to: "/" %></p>
     <h2>Prime Factorizaton Results</h2>
 
-    <p><%= @x %> = <%= @y %></p>
+    <%= if @y === 0 do %>
+      <p><%= @x %> cannot be factorized</p>
+    <% else %>
+      <p>The Factors of <%= @x %>:</p>
+      <p><%= Enum.join(@y, ", ")%></p>
+    <% end %>
   </div>
 </div>

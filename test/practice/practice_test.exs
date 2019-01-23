@@ -28,7 +28,6 @@ defmodule Practice.PracticeTest do
   end
 
   test "check palindrome" do
-    # TODO: raw ints? non strings? probs not
     assert palindrome("racecar") == true
     assert palindrome("121") == true
     assert palindrome("") == true

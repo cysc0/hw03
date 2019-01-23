@@ -21,14 +21,14 @@ defmodule PracticeWeb.PageControllerTest do
     assert html_response(conn, 200) =~ "17"
   end
 
-  test "palindrome racecar", %{conn: conn} do
-    conn = post conn, "/palindrome", %{"expr" => "racecar"}
-    assert html_response(conn, 200) =~ true
+  test "palindrome tattarrattat", %{conn: conn} do
+    conn = post conn, "/palindrome", %{"expr" => "tattarrattat"}
+    assert html_response(conn, 200) =~ "tattarrattat is a palindrome"
   end
 
   test "palindrome banana", %{conn: conn} do
     conn = post conn, "/palindrome", %{"expr" => "banana"}
-    assert html_response(conn, 200) =~ false
+    assert html_response(conn, 200) =~ "banana is not a palindrome"
   end
 
 end

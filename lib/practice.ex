@@ -16,13 +16,25 @@ defmodule Practice do
     Practice.Calc.calc(expr)
   end
 
-  def factor(x) do
+  def factor(x) when is_integer(x) do
     # Delegate to lib/practice/calc.ex
-    Practice.Calc.factorize(x)
+    # return as stringified list
+    result = Practice.Calc.factorize(x)
+    if result === 0 do # hanlde errors when input is < 2
+      0
+    else
+      result
+    end
   end
 
+  def factor(x) when is_bitstring(x) do
+    # handle string input version
+    factor(String.to_integer(x))
+  end
+
+
   def palindrome(expr) do
-    # TODO: make me work
-    true
+    # Compare lowercase to reversed lowercase
+    String.downcase(expr) === String.downcase(String.reverse(expr))
   end
 end

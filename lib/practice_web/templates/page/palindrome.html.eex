@@ -3,7 +3,11 @@
     <p><%= link "← go back", to: "/" %></p>
     <h2>Palindrome Results</h2>
 
-    <p><%= @expr %> . <%= @y %></p>
+    <%= if @y do %>
+        <p><%= @expr %> is a palindrome</p>
+    <% else %>
+        <p><%= @expr %> is not a palindrome</p>
+    <% end %>
   </div>
 </div>
 
