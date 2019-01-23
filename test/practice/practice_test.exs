@@ -28,12 +28,7 @@ defmodule Practice.PracticeTest do
   end
 
   test "check palindrome" do
-    assert palindrome("racecar") == true
-    assert palindrome("121") == true
-    assert palindrome("") == true
     assert palindrome("!32axa23!") == true
-    assert palindrome("apple") == false
-    assert palindrome("NU") == false
     assert palindrome("haha") == false
   end
 
