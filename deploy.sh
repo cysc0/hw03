@@ -12,6 +12,7 @@ mix compile
 cd assets
 npm install
 webpack --mode production
+cd ..
 mix phx.digest
 
 echo "Generating release..."
