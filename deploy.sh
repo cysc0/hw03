@@ -1,4 +1,5 @@
 #!/bin/bash
+cd "$(dirname "$0")"
 
 export MIX_ENV=prod
 export PORT=4790

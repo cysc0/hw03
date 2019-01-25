@@ -10,12 +10,12 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :practice, PracticeWeb.Endpoint,
-  http: [port: {:system, "PORT"}],
-  url: [host: "localhost", port: {:system, "PORT"}], # This is critical for ensuring web-sockets properly authorize.
-  cache_static_manifest: "priv/static/cache_manifest.json",
   server: true,
+  http: [:inet6, port: {:system, "PORT"}],
+  cache_static_manifest: "priv/static/cache_manifest.json",
   root: ".",
-  version: Application.spec(:phoenix_distillery, :vsn)
+  version: Application.spec(:phoenix_distillery, :vsn),
+  url: [host: "hw02.zombo.club", port: 80]
 
 # Do not print debug messages in production
 config :logger, level: :info
