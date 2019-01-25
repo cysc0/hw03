@@ -81,6 +81,6 @@ unless File.exists?(path) do
 end
 secret = File.read!(path)
 
-config :draw, PracticeWeb.Endpoint,
-  secret_key_base: secret
+# config :draw, PracticeWeb.Endpoint,
+  # secret_key_base: secret
 
