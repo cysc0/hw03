@@ -17,4 +17,4 @@ _build/prod/rel/practice/bin/practice stop || true
 
 echo "Starting app..."
 
-_build/prod/rel/practice/bin/practice Start
+_build/prod/rel/practice/bin/practice foreground
