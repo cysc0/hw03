@@ -79,6 +79,15 @@ defmodule Practice.Calc do
     solve_inner(expr, [])
   end
 
+  # Feedback from TA Sangeetha C, solve inner should be more like
+  #Re-written using pattern matching
+  # def solve_inner([],[head_stack | rest_stack]), do: elem(head_stack,1)
+  # def solve_inner([{:num,num}| poppedList], stack), do: solve_inner(poppedList, [{:num,num}] ++ stack)
+  # def solve_inner([{:op, +} | poppedList], [{:num, num1} | [{:num, num2} | poppedStack]]), do: solve_inner(poppedList, [{:num, num1 + num2}] ++ poppedStack)
+  # def solve_inner([{:op, -} | poppedList], [{:num, num1} | [{:num, num2} | poppedStack]]), do: solve_inner(poppedList, [{:num, num1 - num2}] ++ poppedStack)
+  # def solve_inner([{:op, *} | poppedList], [{:num, num1} | [{:num, num2} | poppedStack]]), do: solve_inner(poppedList, [{:num, num1 * num2}] ++ poppedStack)
+  # def solve_inner([{:op, /} | poppedList], [{:num, num1} | [{:num, num2} | poppedStack]]), do: solve_inner(poppedList, [{:num, num1 / num2}] ++ poppedStack)
+  
   def solve_inner(inputQueue, stack) do
     if length(inputQueue) === 0 do
       {res, _} = List.pop_at(stack, 0)
